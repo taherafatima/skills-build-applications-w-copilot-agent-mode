@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+
 const Teams = () => {
   const [teams, setTeams] = useState([]);
   const endpoint = `${process.env.REACT_APP_CODESPACE_URL}/api/teams/`;
 
   useEffect(() => {
-    console.log('Fetching Teams from:', endpoint);
+    console.log('Teams API endpoint:', endpoint);
     fetch(endpoint)
       .then(res => res.json())
       .then(data => {

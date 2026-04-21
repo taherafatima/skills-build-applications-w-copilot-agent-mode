@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+
 const Activities = () => {
   const [activities, setActivities] = useState([]);
   const endpoint = `${process.env.REACT_APP_CODESPACE_URL}/api/activities/`;
 
   useEffect(() => {
-    console.log('Fetching Activities from:', endpoint);
+    console.log('Activities API endpoint:', endpoint);
     fetch(endpoint)
       .then(res => res.json())
       .then(data => {

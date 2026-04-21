@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+
 const Leaderboard = () => {
   const [leaders, setLeaders] = useState([]);
   const endpoint = `${process.env.REACT_APP_CODESPACE_URL}/api/leaderboard/`;
 
   useEffect(() => {
-    console.log('Fetching Leaderboard from:', endpoint);
+    console.log('Leaderboard API endpoint:', endpoint);
     fetch(endpoint)
       .then(res => res.json())
       .then(data => {
