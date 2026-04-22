@@ -11,6 +11,10 @@
   --grad-primary:  linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
   --grad-bg:       linear-gradient(135deg, #dde8ff 0%, #ece0ff 50%, #d4f5ef 100%);
   --shadow-card:   0 4px 24px rgba(58, 134, 255, 0.12);
+    --color-green:   #06d6a0;
+    --color-orange:  #ff8800;
+    --color-light:   #f8f9fa;
+    --shadow-logo:   0 2px 12px rgba(58, 134, 255, 0.18);
 }
 
 /* ── Base ────────────────────────────────────────────── */
@@ -20,6 +24,8 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    letter-spacing: 0.01em;
+    font-size: 1.05rem;
 }
 
 /* ── Navbar ─────────────────────────────────────────── */
@@ -27,6 +33,28 @@ body {
   background: var(--grad-primary) !important;
   box-shadow: 0 3px 12px rgba(58, 134, 255, 0.30);
   padding: 0.6rem 1rem;
+    border-bottom: 3px solid var(--color-yellow);
+  }
+
+  .navbar .navbar-brand {
+    color: #fff !important;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .octofit-logo {
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    margin-right: 0.5rem;
+    box-shadow: var(--shadow-logo);
+    border-radius: 12px;
+    background: #fff;
+    border: 2px solid var(--color-blue);
 }
 .navbar .navbar-brand {
   color: #fff !important;
@@ -40,6 +68,8 @@ body {
   padding: 0.45rem 0.9rem !important;
   border-radius: 8px;
   transition: background 0.18s, color 0.18s;
+    font-size: 1.08rem;
+    margin: 0 0.1rem;
 }
 .navbar .nav-link:hover {
   background: rgba(255,255,255,0.15);
@@ -49,6 +79,7 @@ body {
   background: rgba(255,255,255,0.22);
   color: var(--color-yellow) !important;
   font-weight: 700;
+    border-bottom: 2px solid var(--color-yellow);
 }
 
 /* ── Headings ────────────────────────────────────────── */
@@ -57,7 +88,117 @@ h2 { color: var(--color-purple); font-weight: 700; }
 h3 { color: var(--color-blue);   font-weight: 700; }
 h4, h5, .card-title { color: var(--color-dark); font-weight: 700; }
 
+.card-header {
+  background: linear-gradient(90deg, #f8fafc 0%, #e0e7ff 100%);
+  border-bottom: 2px solid var(--color-blue);
+}
+
+.card {
+  border-radius: 18px;
+  box-shadow: var(--shadow-card);
+  border: 1.5px solid #e0e7ff;
+}
+
+.feature-card {
+  border: 2px solid var(--color-blue);
+  background: #f8fafc;
+}
+
 .display-4 {
+  color: var(--color-pink);
+  text-shadow: 1px 2px 8px #fff2fa;
+}
+
+/* ── Table Styling ───────────────────────────── */
+.table {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(58, 134, 255, 0.07);
+}
+.table thead {
+  background: var(--color-blue);
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f0f7ff;
+}
+.table-hover > tbody > tr:hover {
+  background-color: #e0e7ff;
+}
+.table-bordered {
+  border: 2px solid var(--color-blue);
+}
+
+/* ── Button Styling ─────────────────────────── */
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-secondary {
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 8px rgba(58, 134, 255, 0.10);
+  border: none;
+  transition: background 0.18s, color 0.18s;
+}
+.btn-primary {
+  background: var(--color-blue);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--color-purple);
+  color: #fff;
+}
+.btn-success {
+  background: var(--color-green);
+  color: #fff;
+}
+.btn-success:hover {
+  background: var(--color-teal);
+  color: #fff;
+}
+.btn-warning {
+  background: var(--color-yellow);
+  color: var(--color-dark);
+}
+.btn-warning:hover {
+  background: var(--color-orange);
+  color: #fff;
+}
+.btn-info {
+  background: var(--color-teal);
+  color: #fff;
+}
+.btn-info:hover {
+  background: var(--color-blue);
+  color: #fff;
+}
+.btn-secondary {
+  background: var(--color-dark);
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: var(--color-purple);
+  color: #fff;
+}
+
+/* ── Link Styling ───────────────────────────── */
+a, .link {
+  color: var(--color-pink);
+  text-decoration: underline dotted;
+  transition: color 0.18s;
+}
+a:hover, .link:hover {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+/* ── Favicon (handled in index.html) ────────── */
+
+/* ── Misc ───────────────────────────────────── */
+.badge {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
   background: var(--grad-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

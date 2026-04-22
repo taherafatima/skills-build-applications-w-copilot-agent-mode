@@ -28,7 +28,7 @@ const Teams = () => {
 
   return (
     <div className="card mb-4 shadow-sm">
-      <div className="card-header d-flex justify-content-between align-items-center">
+      <div className="card-header d-flex justify-content-between align-items-center bg-info text-white">
         <h2 className="h4 mb-0 fw-bold">👥 Teams</h2>
         <span className="badge rounded-pill bg-light text-dark">{teams.length} teams</span>
       </div>
@@ -48,8 +48,8 @@ const Teams = () => {
           </div>
         ) : (
           <div className="table-responsive">
-            <table className="table table-striped table-bordered table-hover mb-0">
-              <thead>
+            <table className="table table-striped table-bordered table-hover mb-0 align-middle">
+              <thead className="table-info">
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Team Name</th>

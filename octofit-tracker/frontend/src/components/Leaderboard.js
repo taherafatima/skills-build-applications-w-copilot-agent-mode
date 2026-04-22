@@ -35,7 +35,7 @@ const Leaderboard = () => {
 
   return (
     <div className="card mb-4 shadow-sm">
-      <div className="card-header d-flex justify-content-between align-items-center">
+      <div className="card-header d-flex justify-content-between align-items-center bg-primary text-white">
         <h2 className="h4 mb-0 fw-bold">🏆 Leaderboard</h2>
         <span className="badge rounded-pill bg-light text-dark">{leaders.length} entries</span>
       </div>
@@ -56,7 +56,7 @@ const Leaderboard = () => {
         ) : (
           <div className="table-responsive">
             <table className="table table-striped table-bordered table-hover mb-0 align-middle">
-              <thead>
+              <thead className="table-dark">
                 <tr>
                   <th scope="col">Rank</th>
                   <th scope="col">Name</th>
