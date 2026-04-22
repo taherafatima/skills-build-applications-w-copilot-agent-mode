@@ -55,7 +55,7 @@ const Leaderboard = () => {
           </div>
         ) : (
           <div className="table-responsive">
-            <table className="table table-striped table-bordered table-hover mb-0">
+            <table className="table table-striped table-bordered table-hover mb-0 align-middle">
               <thead>
                 <tr>
                   <th scope="col">Rank</th>
