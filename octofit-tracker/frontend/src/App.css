@@ -199,12 +199,6 @@ a:hover, .link:hover {
   font-weight: 600;
   letter-spacing: 0.01em;
 }
-  background: var(--grad-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 800;
-}
 
 /* ── Cards ───────────────────────────────────────────── */
 .card {
