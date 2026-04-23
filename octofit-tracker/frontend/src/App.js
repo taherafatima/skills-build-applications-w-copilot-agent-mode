@@ -58,7 +58,7 @@ function App() {
         <div className="container">
           <NavLink className="navbar-brand d-flex align-items-center gap-2" to="/">
             <img src={logo} alt="Octofit Logo" className="octofit-logo" />
-            <span className="fw-bold fs-4">Octofit Tracker</span>
+            <span className="fw-bold fs-4 gradient-text">Octofit Tracker</span>
           </NavLink>
           <button
             className="navbar-toggler"
